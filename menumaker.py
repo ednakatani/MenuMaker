@@ -1,6 +1,6 @@
 from os import system, name
   
-def clear():
+def cls():
     if name == 'nt':
         _ = system('cls')
     else:
@@ -15,18 +15,22 @@ class Menu:
         Items → list [ ["Item", function_name], ... ]
         
         '''
+        self.clear = clear
         self.title = title
         self.items = items
 
     def print(self):
         size = len(self.title)
         star = "*" * size * 3
+        n_items = len(self.items)
+        
         print(star)
         print("*".ljust(int(len(star) / 3)) + self.title + "".ljust(int(len(star) / 3) - 1) + "*")
         print(star)
         print()
-        for item in range(len(self.items)):
+        for item in range(n_items):
             print('[' + str(item) + '] - ' + self.items[item][0])
+        print("[" + str(n_items) + "] - Sair")
 
     def get_op(self):
         self.print()
@@ -38,12 +42,16 @@ class Menu:
     def menu(self):
         show = True
         while show:
-            if clear:
-                clear()
+            
+            if self.clear:
+                cls()
 
             op = self.get_op()
-            if clear:
-                clear()
+            if op == len(self.items):
+                break
+            if self.clear:
+                cls()
+
             self.items[op][1]()
             input("ENTER for return")
 
