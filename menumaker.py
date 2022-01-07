@@ -54,6 +54,3 @@ class Menu:
 
             self.items[op][1]()
             input("ENTER for return")
-
-
-

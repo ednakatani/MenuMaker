@@ -12,6 +12,7 @@ def multiplica():
     print(a*b)
     return a*b
 
+
 m = menumaker.Menu("CALCULADORA",True ,[["Soma",soma],["Multiplica",multiplica]])
 
 m.menu()
