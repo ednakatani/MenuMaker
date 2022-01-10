@@ -8,6 +8,7 @@ def cls():
 
 
 class Menu:
+    
     def __init__(self, title, clear, items):
         '''
         Title → string\n
@@ -19,6 +20,7 @@ class Menu:
         self.title = title
         self.items = items
 
+
     def add(self, item):
         self.items.append(item)
 
@@ -26,6 +28,7 @@ class Menu:
     def add(self, name, function):
         item = [name,function]
         self.items.append(item)
+
 
     def print(self):
         size = len(self.title)
@@ -40,12 +43,14 @@ class Menu:
             print('[' + str(item) + '] - ' + self.items[item][0])
         print("[" + str(n_items) + "] - Sair")
 
+
     def get_op(self):
         self.print()
         op = input("> ")
         op = int(op)
 
         return op
+
 
     def menu(self):
         show = True
