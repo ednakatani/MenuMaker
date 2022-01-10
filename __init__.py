@@ -19,6 +19,14 @@ class Menu:
         self.title = title
         self.items = items
 
+    def add(self, item):
+        self.items.append(item)
+
+    
+    def add(self, name, function):
+        item = [name,function]
+        self.items.append(item)
+
     def print(self):
         size = len(self.title)
         star = "*" * size * 3
