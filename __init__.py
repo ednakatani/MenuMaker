@@ -9,7 +9,7 @@ def cls():
 
 class Menu:
     
-    def __init__(self, title, clear, items):
+    def __init__(self, title: str, clear: bool, items: list):
         '''
         Title → string\n
         Clear → True for clearing screen before every menu print\n
