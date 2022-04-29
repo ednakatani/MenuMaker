@@ -1,20 +1,19 @@
 import menumaker
 
-def soma():
+def sum():
     a = int(input('a: '))
     b = int(input('b: '))
     print(a+b)
     return a+b
 
-def multiplica():
+def multiply():
     a = int(input('a: '))
     b = int(input('b: '))
     print(a*b)
     return a*b
 
-menu_soma = menumaker.Menu("SOMA", True, [["Soma 2",soma]])
 
-m = menumaker.Menu("CALCULADORA",True ,[["Soma",menu_soma.menu],["Multiplica",multiplica]])
+m = menumaker.Menu("CALCULATOR",True,False,True ,[["Sum",sum],["Multiply",multiply]])
 
 
 m.menu()
