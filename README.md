@@ -35,7 +35,7 @@ Initializing the Menu class:
 m = menumaker.Menu("CALCULATOR",True,False,True ,[["Sum",sum],["Multiply",multiply]])
 ```
 
-Once the menu is created, run it:
+Running:
 
 ```python
 m.menu()
